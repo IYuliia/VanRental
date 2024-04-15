@@ -1,0 +1,15 @@
+.catalogueContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.leftColumn {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightColumn {
+  width: 888px;
+}

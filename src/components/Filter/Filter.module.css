@@ -1,0 +1,28 @@
+.label {
+  color: #475467;
+  font-size: 16px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.heading {
+  color: #101828;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.li {
+  list-style: none;
+  font-size: 16px;
+  color: #101828;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  height: 95px;
+}

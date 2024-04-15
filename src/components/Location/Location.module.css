@@ -1,0 +1,20 @@
+.label {
+  color: rgba(16, 24, 40, 0.6);
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input {
+  display: block;
+  padding: 18px;
+  font-size: 16px;
+  color: #101828;
+  background-color: #f7f7f7;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.input::placeholder {
+  color: #101828;
+}

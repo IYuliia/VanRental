@@ -3,14 +3,21 @@ import React from 'react';
 import VehicleList from '../../components/VehicleList/VehicleList';
 import Filter from '../../components/Filter/Filter';
 import SearchButton from '../../components/SearchButton/SearchButton';
+import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
+import styles from './Catalogue.module.css';
 
 const Catalogue = () => {
   return (
-    <div>
-      <Location />
-      <Filter />
-      <SearchButton />
-      <VehicleList />
+    <div className={styles.catalogueContainer}>
+      <div className={styles.leftColumn}>
+        <Location />
+        <Filter />
+        <SearchButton />
+      </div>
+      <div className={styles.rightColumn}>
+        <VehicleList />
+        <LoadMoreButton />
+      </div>
     </div>
   );
 };
