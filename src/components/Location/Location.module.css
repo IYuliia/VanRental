@@ -1,8 +1,10 @@
 .label {
-  color: rgba(16, 24, 40, 0.6);
-  font-size: 16px;
   margin-bottom: 8px;
   display: block;
+  color: rgba(16, 24, 40, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .input {
@@ -17,4 +19,8 @@
 
 .input::placeholder {
   color: #101828;
+}
+
+.container {
+  margin-bottom: 32px;
 }

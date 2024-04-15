@@ -3,7 +3,6 @@ import React from 'react';
 import VehicleList from '../../components/VehicleList/VehicleList';
 import Filter from '../../components/Filter/Filter';
 import SearchButton from '../../components/SearchButton/SearchButton';
-import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import styles from './Catalogue.module.css';
 
 const Catalogue = () => {
@@ -16,7 +15,6 @@ const Catalogue = () => {
       </div>
       <div className={styles.rightColumn}>
         <VehicleList />
-        <LoadMoreButton />
       </div>
     </div>
   );

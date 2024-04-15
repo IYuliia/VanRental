@@ -3,7 +3,7 @@ import styles from './Location.module.css';
 
 const Location = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <label className={styles.label} htmlFor="location">
         Location
       </label>

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 64px;
+  margin: 100px 64px;
 }
 
 .leftColumn {

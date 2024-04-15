@@ -3,6 +3,8 @@
   font-size: 16px;
   margin-bottom: 14px;
   display: block;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .heading {
@@ -10,12 +12,22 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+  padding-bottom: 24px;
 }
 
 .ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  width: 360px;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.ul:last-child {
+  margin-bottom: 64px;
 }
 
 .li {
@@ -25,4 +37,14 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
   height: 95px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 20px;
+  flex-basis: calc(50% - 4px);
+}
+
+.li:nth-last-child(-n + 2) {
+  flex-basis: calc(50% - 4px);
 }
