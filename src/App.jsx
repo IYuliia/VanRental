@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Homepage from './pages/Homepage/Homepage';
+// import Homepage from './pages/Homepage/Homepage';
 import Catalogue from './pages/Catalogue/Catalogue';
-import Favourites from './pages/Favourites/Favourites';
-import Features from './pages/Features/Features';
-import Reviews from './pages/Reviews/Reviews';
+// import Favourites from './pages/Favourites/Favourites';
+// import Features from './pages/Features/Features';
+// import Reviews from './pages/Reviews/Reviews';
 
 export const App = () => {
   return (
