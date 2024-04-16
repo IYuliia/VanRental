@@ -32,9 +32,7 @@ const Homepage = () => {
 
           <button className={styles.button}  onClick={handleRentVanClick}>Rent a Van</button>
         </div>
-        <div className={styles.rightColumn}>
-          <img src="../../images/Homepage_sm.jpg" alt="Happy woman in a van" className={styles.img}/>
-        </div>
+       
     </div>
   );
 };

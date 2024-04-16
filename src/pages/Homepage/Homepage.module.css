@@ -4,44 +4,40 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     gap: 64px;
-    margin: 100px 64px;
-
+    padding: 100px 64px;
+    background-color: white;
+    text-align: center;
+    background-image: linear-gradient(
+        rgba(246, 246, 230, 0.7),
+        rgba(227, 227, 236, 0.7)
+      ),
+      url("/public/Homepage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
   }
   
   .leftColumn {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  .rightColumn {
-    height: auto;
-  }
-
-
-  .img {
-    object-fit: cover;
-    border-radius: 10px;
-    /* width: 300px;
-    height: 300px; */
+text-align: left;
+max-width: 50%;
   }
 
   
   .header {
 color: #101828;
-font-size: 24px;
+font-size: 28px;
 font-weight: 600;
 line-height: 30px; 
 margin-bottom: 32px;
 }
 
 .descr {
-    color: #475467;
-font-size: 16px;
+    color: #101828;
+font-size: 18px;
 font-weight: 400;
 line-height: 24px;
-margin-bottom: 24px;
+margin-bottom: 32px;
 }
 
 .button {

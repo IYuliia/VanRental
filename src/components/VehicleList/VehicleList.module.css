@@ -58,6 +58,10 @@
   line-height: 30px;
 }
 
+.heartIcon {
+  stroke: #101828;
+}
+
 .additional {
   display: flex;
   align-items: flex-start;

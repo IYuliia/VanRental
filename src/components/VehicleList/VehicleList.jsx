@@ -4,6 +4,7 @@ import { fetchVehiclesApi } from '../../api/vehicles';
 import styles from './VehicleList.module.css';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import Modal from '../../components/Modal/Modal';
+import { ReactComponent as HeartIcon } from '../../icons/heart.svg';
 
 const VehicleList = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -61,10 +62,13 @@ const VehicleList = () => {
                 <div className={styles.headline}>
                   <h1 className={styles.heading}>{vehicle.name}</h1>
                   <p className={styles.price}>€{vehicle.price}</p>
+                  <HeartIcon className={styles.heartIcon} />
+                  {/* <svg className={styles.heartIcon}  width="24" height="24"><use href="/icons.svg#icon-heart"></use></svg> */}
                 </div>
                 <div className={styles.additional}>
                   <p className={styles.rating}>{vehicle.rating}</p>
                   <p className={styles.location}>{vehicle.location}</p>
+                  
                 </div>
                 <p className={styles.descr}>{vehicle.description}</p>
                 <ul className={styles.detailsList}>
