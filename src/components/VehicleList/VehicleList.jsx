@@ -5,6 +5,9 @@ import styles from './VehicleList.module.css';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import Modal from '../../components/Modal/Modal';
 import { ReactComponent as HeartIcon } from '../../icons/heart.svg';
+import { ReactComponent as StarIcon } from '../../icons/star_yellow.svg';
+import { ReactComponent as LocationIcon } from '../../icons/map-pin.svg';
+
 
 const VehicleList = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -61,12 +64,15 @@ const VehicleList = () => {
               <div className={styles.info}>
                 <div className={styles.headline}>
                   <h1 className={styles.heading}>{vehicle.name}</h1>
+                  <div className={styles.end}>
                   <p className={styles.price}>€{vehicle.price}</p>
                   <HeartIcon className={styles.heartIcon} />
-                  {/* <svg className={styles.heartIcon}  width="24" height="24"><use href="/icons.svg#icon-heart"></use></svg> */}
+                  </div>
                 </div>
                 <div className={styles.additional}>
-                  <p className={styles.rating}>{vehicle.rating}</p>
+                <StarIcon className={styles.starIcon} />
+                  <p className={styles.rating}>{vehicle.rating}({vehicle.reviews.length} Reviews)</p>
+                  <LocationIcon className={styles.locationIcon} />
                   <p className={styles.location}>{vehicle.location}</p>
                   
                 </div>

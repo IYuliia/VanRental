@@ -56,16 +56,26 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
+  margin-right: 11px;
 }
 
 .heartIcon {
   stroke: #101828;
 }
 
+.end{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.starIcon {
+  margin-right: 4px;
+}
+
 .additional {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
   margin-bottom: 24px;
 }
 
@@ -75,6 +85,11 @@
   font-weight: 400;
   line-height: 24px;
   text-decoration-line: underline;
+  margin-right: 16px;
+}
+
+.locationIcon {
+  margin-right: 4px;
 }
 
 .location {

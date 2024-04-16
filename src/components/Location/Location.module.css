@@ -9,7 +9,8 @@
 
 .input {
   display: block;
-  padding: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   font-size: 16px;
   color: #101828;
   background-color: #f7f7f7;
@@ -23,4 +24,20 @@
 
 .container {
   margin-bottom: 32px;
+}
+
+.inputContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.pinIcon {
+  position: absolute;
+  left: 18px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="text"] {
+  padding-left: 44px; 
 }
