@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.57a24a17.css",
-    "main.js": "/test-task/static/js/main.8db2a970.js",
+    "main.css": "/test-task/static/css/main.aefde759.css",
+    "main.js": "/test-task/static/js/main.f0c895d6.js",
     "static/media/Homepage.jpg": "/test-task/static/media/Homepage.2052146cef6fd687c4c0.jpg",
+    "static/media/ac.svg": "/test-task/static/media/ac.3fa8d876573e81d0e423faf46aa4efed.svg",
+    "static/media/alcove.svg": "/test-task/static/media/alcove.18c3fc427a5298ec63b29e3a479b76ac.svg",
+    "static/media/fully_integrated.svg": "/test-task/static/media/fully_integrated.3c57f596f684ac9c99d342648df500bd.svg",
+    "static/media/van.svg": "/test-task/static/media/van.aa825a0616557ab4a8f3a18b9e8c4de4.svg",
+    "static/media/automatic.svg": "/test-task/static/media/automatic.0e30b427d3093f08272972bc45aa913d.svg",
+    "static/media/pin.svg": "/test-task/static/media/pin.2eb8f2b228df3c38dfded85b94856d22.svg",
     "index.html": "/test-task/index.html",
     "static/media/heart.svg": "/test-task/static/media/heart.eaf1f75040c7665a5b109514d8630386.svg",
-    "main.57a24a17.css.map": "/test-task/static/css/main.57a24a17.css.map",
-    "main.8db2a970.js.map": "/test-task/static/js/main.8db2a970.js.map"
+    "static/media/star_yellow.svg": "/test-task/static/media/star_yellow.e2e418408e4573c2f3da006fdc964ae5.svg",
+    "static/media/tv.svg": "/test-task/static/media/tv.4855f40aff224713c6f2121435850e22.svg",
+    "static/media/map-pin.svg": "/test-task/static/media/map-pin.eb500cc54f71a70a658d2fa4ed9248ce.svg",
+    "static/media/shower_wc.svg": "/test-task/static/media/shower_wc.ad88a8d99c1a7e345154aaa8c70799cc.svg",
+    "static/media/kitchen.svg": "/test-task/static/media/kitchen.1d69252845b6b8717bd15e71e0b0f330.svg",
+    "main.aefde759.css.map": "/test-task/static/css/main.aefde759.css.map",
+    "main.f0c895d6.js.map": "/test-task/static/js/main.f0c895d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.57a24a17.css",
-    "static/js/main.8db2a970.js"
+    "static/css/main.aefde759.css",
+    "static/js/main.f0c895d6.js"
   ]
 }
