@@ -1,7 +1,6 @@
 .container {
   display: flex;
   gap: 24px;
-  /* width: calc(100% / 2 - 24px); */
 }
 
 .leftColumn,

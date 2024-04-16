@@ -1,0 +1,70 @@
+.reviewItem {
+  margin-bottom: 24px;
+}
+
+.reviewItem:last-child {
+  margin-bottom: 0;
+}
+
+.avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar::before {
+  content: attr(data-initial);
+  color: #e44848;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.name {
+  color: #101828;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.comment {
+  color: #475467;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+}
+
+.leftColumn,
+.rightColumn {
+  flex: 1;
+}
+
+.leftColumnt {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.reviewTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
