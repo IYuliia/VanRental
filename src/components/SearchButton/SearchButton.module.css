@@ -8,3 +8,8 @@
   letter-spacing: -0.5px;
   max-width: 173px;
 }
+
+.button:hover,
+.button:focus {
+  background-color: #d84343;
+}

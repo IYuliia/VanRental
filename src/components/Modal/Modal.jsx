@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Modal.module.css';
+import Features from '../../components/Features/Features';
+import Reviews from '../../components/Reviews/Reviews';
 
 const Modal = ({ vehicle, onClose }) => {
+  const [isFeaturesClicked, setIsFeaturesClicked] = useState(false);
+  const [isReviewsClicked, setIsReviewsClicked] = useState(false);
+
+  const handleFeaturesClick = () => {
+    setIsFeaturesClicked(true);
+    setIsReviewsClicked(false);
+  };
+
+  const handleReviewsClick = () => {
+    setIsReviewsClicked(true);
+    setIsFeaturesClicked(false);
+  };
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
@@ -12,6 +27,7 @@ const Modal = ({ vehicle, onClose }) => {
         </div>
         <p className={styles.price}>€{vehicle.price}</p>
         <ul className={styles.imgList}>
+          {' '}
           <li className={styles.imgItem}>
             <img
               className={styles.img}
@@ -35,8 +51,16 @@ const Modal = ({ vehicle, onClose }) => {
           </li>
         </ul>
         <p className={styles.description}>{vehicle.description}</p>
-        <h2 className={styles.heading}>Features</h2>
-        <h2 className={styles.heading}>Reviews</h2>
+        <div className={styles.sectionToggle}>
+          <button className={styles.heading} onClick={handleFeaturesClick}>
+            Features
+          </button>
+          <button className={styles.heading} onClick={handleReviewsClick}>
+            Reviews
+          </button>
+        </div>
+        {isFeaturesClicked && <Features vehicle={vehicle} />}
+        {isReviewsClicked && <Reviews vehicle={vehicle} />}
         <button onClick={onClose}>Close</button>
         <div className={styles.line}></div>
       </div>

@@ -11,7 +11,7 @@ const Location = () => {
         className={styles.input}
         type="text"
         id="location"
-        placeholder="Kyiv, Ukraine"
+        placeholder="City"
       />
     </div>
   );
