@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './Modal.module.css';
 import Features from '../../components/Features/Features';
 import Reviews from '../../components/Reviews/Reviews';
+import { ReactComponent as StarIcon } from '../../icons/star_yellow.svg';
+import { ReactComponent as LocationIcon } from '../../icons/map-pin.svg';
 
 const Modal = ({ vehicle, onClose }) => {
   const [isFeaturesClicked, setIsFeaturesClicked] = useState(false);
@@ -21,10 +23,13 @@ const Modal = ({ vehicle, onClose }) => {
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
         <h2 className={styles.name}>{vehicle.name}</h2>
-        <div className={styles.subheading}>
-          <p className={styles.rating}>{vehicle.rating}</p>
-          <p className={styles.location}>{vehicle.location}</p>
-        </div>
+        <div className={styles.additional}>
+                <StarIcon className={styles.starIcon} />
+                  <p className={styles.rating}>{vehicle.rating}({vehicle.reviews.length} Reviews)</p>
+                  <LocationIcon className={styles.locationIcon} />
+                  <p className={styles.location}>{vehicle.location}</p>
+                  
+                </div>
         <p className={styles.price}>€{vehicle.price}</p>
         <ul className={styles.imgList}>
           {' '}
