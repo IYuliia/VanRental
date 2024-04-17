@@ -5,7 +5,7 @@
     justify-content: space-between;
     gap: 64px;
     padding: 100px 64px;
-    background-color: white;
+    background-color: #ffffff;
     text-align: center;
     background-image: linear-gradient(
         rgba(246, 246, 230, 0.7),
@@ -21,11 +21,11 @@
   .leftColumn {
 text-align: left;
 max-width: 50%;
-  }
+}
 
   
   .header {
-color: #101828;
+color: var(--black-color);
 font-size: 28px;
 font-weight: 600;
 line-height: 30px; 
@@ -33,7 +33,7 @@ margin-bottom: 32px;
 }
 
 .descr {
-    color: #101828;
+color: var(--black-color);
 font-size: 18px;
 font-weight: 400;
 line-height: 24px;
@@ -41,7 +41,7 @@ margin-bottom: 32px;
 }
 
 .button {
-    background-color: #e44848;
+    background-color: var(--accent-color);
     color: #ffffff;
     padding: 16px 40px;
     border-radius: 200px;
@@ -54,6 +54,6 @@ margin-bottom: 32px;
   
   .button:hover,
   .button:focus {
-    background-color: #d84343;
+    background-color: var(--hover-accent-color);
   }
 

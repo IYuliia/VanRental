@@ -1,5 +1,5 @@
 .label {
-  color: #475467;
+  color: var(--light-black-color);
   font-size: 16px;
   margin-bottom: 14px;
   display: block;
@@ -8,7 +8,7 @@
 }
 
 .heading {
-  color: #101828;
+  color: var(--black-color);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
@@ -49,7 +49,7 @@
 }
 
 .li:hover, .li:focus {
-  border-color: #E44848;
+  border-color: var(--accent-color);
 }
 
 .icon {
@@ -72,7 +72,7 @@
 }
 
 .span {
-  color: #101828;
+  color: var(--black-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;

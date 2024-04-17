@@ -1,38 +1,13 @@
-// import { NavLink } from 'react-router-dom';
-// import styles from './Header.module.css';
-
-// const Header = () => {
-//   return (
-//     <nav className={styles.navbar}>
-//       <ul className={styles.list}>
-//         <li className={styles.item}>
-//           <NavLink end to="/" className={styles.link} activeclassname={styles.activeLink}>
-//             Home
-//           </NavLink>
-//         </li>
-//         <li className={styles.item}>
-//           <NavLink end to="/catalogue" className={styles.link} activeclassname={styles.activeLink}>
-//             Catalogue
-//           </NavLink>
-//         </li>
-//         <li className={styles.item}>
-//           <NavLink end to="/favourites" className={styles.link} activeclassname={styles.activeLink}>
-//             Favourites
-//           </NavLink>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Header;
-
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
+import { ReactComponent as AlcoveIcon } from '../../icons/alcove.svg';
 
 const Header = () => {
   return (
     <nav className={styles.navbar}>
+      <NavLink to="/" >
+        <AlcoveIcon width='32' height='32' />
+      </NavLink>
       <ul className={styles.list}>
         <li className={styles.item}>
           <NavLink 

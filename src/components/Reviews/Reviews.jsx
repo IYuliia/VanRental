@@ -1,6 +1,8 @@
-import ContactForm from '../../components/Form/Form';
 import React from 'react';
 import styles from './Reviews.module.css';
+import ContactForm from '../../components/Form/Form';
+import { ReactComponent as GreyStarIcon } from '../../icons/star_grey.svg';
+import { ReactComponent as YellowStarIcon } from '../../icons/star_yellow.svg';
 
 const Reviews = ({ vehicle }) => {
   return (
@@ -17,7 +19,11 @@ const Reviews = ({ vehicle }) => {
 
                 <div className={styles.avatarInfo}>
                   <p className={styles.name}>{review.reviewer_name}</p>
-                  <p>{review.reviewer_rating}</p>
+                  <div className={styles.starRating}>
+                  {[...Array(5)].map((_, i) => (
+                      i < review.reviewer_rating ? <YellowStarIcon key={i} /> : <GreyStarIcon key={i} />
+                    ))}
+                  </div>
                 </div>
               </div>
               <p className={styles.comment}>{review.comment}</p>
@@ -33,3 +39,4 @@ const Reviews = ({ vehicle }) => {
 };
 
 export default Reviews;
+

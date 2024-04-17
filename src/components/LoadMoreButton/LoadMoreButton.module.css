@@ -11,5 +11,5 @@
 
 .button:hover,
 .button:focus {
-  border-color: #e44848;
+  border-color: var(--accent-color);
 }

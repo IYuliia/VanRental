@@ -9,14 +9,14 @@
 }
 
 .heading {
-  color: #101828;
+  color: var(--black-color);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
 }
 
 .descr {
-  color: #475467;
+  color: var(--light-black-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -31,7 +31,7 @@
 
 .input {
   border-radius: 10px;
-  background: #f7f7f7;
+  background: var(--input-color);
   padding: 18px;
   border: transparent;
   width: 400px;
@@ -52,7 +52,7 @@
 }
 
 .button {
-  background-color: #e44848;
+  background-color: var(--accent-color);
   color: #ffffff;
   padding: 16px 60px;
   border-radius: 200px;
@@ -65,5 +65,17 @@
 
 .button:hover,
 .button:focus {
-  background-color: #d84343;
+  background-color: var(--hover-accent-color);
 }
+
+.notification {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+  padding: 16px 60px;
+  border-radius: 200px;
+  border: transparent;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  max-width: 400px;
+}
+

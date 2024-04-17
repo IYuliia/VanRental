@@ -11,7 +11,7 @@
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  background-color: #f2f4f7;
+  background-color: var(--light-grey-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,21 +19,21 @@
 
 .avatar::before {
   content: attr(data-initial);
-  color: #e44848;
+  color: var(--accent-color);
   font-size: 24px;
   font-weight: 600;
   line-height: 60px;
 }
 
 .name {
-  color: #101828;
+  color: var(--black-color);
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 }
 
 .comment {
-  color: #475467;
+  color: var(--light-black-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

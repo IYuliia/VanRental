@@ -12,7 +12,7 @@
 }
 
 .modalContent {
-  background-color: white;
+  background-color: #ffffff;
   padding: 40px;
   border-radius: 20px;
   max-height: 100%;
@@ -40,7 +40,7 @@
 
 
 .name {
-  color: #101828;
+  color: var(--black-color);
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
@@ -58,7 +58,7 @@
 }
 
 .rating {
-  color: #101828;
+  color: var(--black-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -71,14 +71,14 @@
 }
 
 .location {
-  color: #101828;
+  color: var(--black-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .price {
-  color: #101828;
+  color: var(--black-color);
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
@@ -106,7 +106,7 @@
 }
 
 .description {
-  color: #475467;
+  color: var(--light-black-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -123,27 +123,27 @@
 
 .heading {
   display: inline;
-  color: #101828;
+  color: var(--black-color);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   margin-right: 40px;
   margin-bottom: 24px;
   border: transparent;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .activeHeading {
   display: inline;
-  color: #101828;
+  color: var(--black-color);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   margin-right: 40px;
   margin-bottom: 24px;
   border: transparent;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -153,7 +153,7 @@
   width: 100%;
   height: 5px;
   border-radius: 2px;
-  background-color: #e44848;
+  background-color: var(--accent-color);
   content: "";
   position: absolute;
   bottom: -24px;
@@ -165,7 +165,7 @@
 }
 
 .heading:hover, .heading:focus {
-  color: #E44848;
+  color: var(--accent-color);
 }
 
 .sectionToggle {

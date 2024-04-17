@@ -9,6 +9,8 @@ const ContactForm = () => {
     comment: '',
   });
 
+  const [notification, setNotification] = useState('');
+
   const handleChange = e => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -19,7 +21,22 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(formData);
+
+    if (formData.name && formData.email && formData.bookingDate) {
+      setNotification('Form submitted successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        bookingDate: '',
+        comment: '',
+      });
+
+      setTimeout(() => {
+        setNotification('');
+      }, 3000); // 3 seconds
+    } else {
+      setNotification('All fields are required!');
+    }
   };
 
   return (
@@ -59,6 +76,7 @@ const ContactForm = () => {
           value={formData.bookingDate}
           placeholder="Booking Date"
           onChange={handleChange}
+          required
         />
 
         <textarea
@@ -70,9 +88,12 @@ const ContactForm = () => {
           onChange={handleChange}
         ></textarea>
       </div>
-      <button className={styles.button} type="submit">
-        Send
-      </button>
+      {!notification && (
+  <button className={styles.button} type="submit">
+    Send
+  </button>
+)}
+{notification && <div className={styles.notification}>{notification}</div>}
     </form>
   );
 };
