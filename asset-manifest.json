@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.867d21c6.css",
-    "main.js": "/test-task/static/js/main.26cd1cad.js",
+    "main.css": "/test-task/static/css/main.87dc591b.css",
+    "main.js": "/test-task/static/js/main.a4d1b786.js",
     "static/media/Homepage.jpg": "/test-task/static/media/Homepage.2052146cef6fd687c4c0.jpg",
     "static/media/ac.svg": "/test-task/static/media/ac.3fa8d876573e81d0e423faf46aa4efed.svg",
     "static/media/alcove.svg": "/test-task/static/media/alcove.18c3fc427a5298ec63b29e3a479b76ac.svg",
@@ -27,11 +27,12 @@
     "static/media/CD.svg": "/test-task/static/media/CD.db1e4c3317c6d3212090407313f51f55.svg",
     "static/media/shower_wc.svg": "/test-task/static/media/shower_wc.ad88a8d99c1a7e345154aaa8c70799cc.svg",
     "static/media/kitchen.svg": "/test-task/static/media/kitchen.1d69252845b6b8717bd15e71e0b0f330.svg",
-    "main.867d21c6.css.map": "/test-task/static/css/main.867d21c6.css.map",
-    "main.26cd1cad.js.map": "/test-task/static/js/main.26cd1cad.js.map"
+    "static/media/close.svg": "/test-task/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
+    "main.87dc591b.css.map": "/test-task/static/css/main.87dc591b.css.map",
+    "main.a4d1b786.js.map": "/test-task/static/js/main.a4d1b786.js.map"
   },
   "entrypoints": [
-    "static/css/main.867d21c6.css",
-    "static/js/main.26cd1cad.js"
+    "static/css/main.87dc591b.css",
+    "static/js/main.a4d1b786.js"
   ]
 }
