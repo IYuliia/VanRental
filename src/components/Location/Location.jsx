@@ -9,7 +9,7 @@ const Location = () => {
         Location
       </label>
       <div className={styles.inputContainer}>
-      <PinIcon className={styles.pinIcon} />
+      <PinIcon className={styles.pinIcon} style={{ stroke: 'red' }}/>
       <input
         className={styles.input}
         type="text"

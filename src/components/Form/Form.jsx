@@ -23,7 +23,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit} name='contactForm'>
       <h3 className={styles.heading}>Book your campervan now</h3>
       <p className={styles.descr}>
         Stay connected! We are always ready to help you.

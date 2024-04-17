@@ -8,18 +8,28 @@
 }
 
 .input {
+  width: 360px;
   display: block;
   padding-top: 18px;
   padding-bottom: 18px;
+  padding-left: 44px;
   font-size: 16px;
   color: #101828;
   background-color: #f7f7f7;
   border: transparent;
   border-radius: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input::placeholder {
   color: #101828;
+}
+
+.input:focus {
+  border-color: rgba(16, 24, 40, 0.20);
+  border-style: solid; 
+  outline-color: transparent;
+  outline-offset: 4px;
 }
 
 .container {
@@ -36,8 +46,4 @@
   left: 18px; 
   top: 50%;
   transform: translateY(-50%);
-}
-
-input[type="text"] {
-  padding-left: 44px; 
 }

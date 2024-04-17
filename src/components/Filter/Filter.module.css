@@ -31,10 +31,11 @@
 }
 
 .li {
+  max-width: 114px;
+  height: 95px;
   list-style: none;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
-  height: 95px;
   padding-top: 17px;
   padding-bottom: 17px;
   flex-basis: calc(50% - 4px);
@@ -76,12 +77,6 @@
   font-weight: 500;
   line-height: 20px;
   text-align: center;
+  white-space: pre-wrap;
+  max-width: 80px;
 }
-
-/* .checkbox:checked+.li {
-  border-color: #e44848;
-}
-
-.radio:checked+.li {
-  border-color: #e44848;
-} */
