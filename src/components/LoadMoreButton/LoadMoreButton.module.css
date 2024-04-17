@@ -6,9 +6,10 @@
   border: 1px solid rgba(71, 84, 103, 0.2);
   font-size: 16px;
   letter-spacing: -0.5px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus {
-  border: 1px solid #e44848;
+  border-color: #e44848;
 }

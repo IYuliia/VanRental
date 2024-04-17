@@ -44,16 +44,30 @@
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .li:hover, .li:focus {
-  border: 1px solid #E44848;
+  border-color: #E44848;
 }
 
 .icon {
   width: 32px;
   height: 32px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .span {
@@ -63,3 +77,11 @@
   line-height: 20px;
   text-align: center;
 }
+
+/* .checkbox:checked+.li {
+  border-color: #e44848;
+}
+
+.radio:checked+.li {
+  border-color: #e44848;
+} */
