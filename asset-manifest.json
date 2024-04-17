@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.87dc591b.css",
-    "main.js": "/test-task/static/js/main.a4d1b786.js",
+    "main.css": "/test-task/static/css/main.eebe9af6.css",
+    "main.js": "/test-task/static/js/main.e8967a31.js",
     "static/media/Homepage.jpg": "/test-task/static/media/Homepage.2052146cef6fd687c4c0.jpg",
     "static/media/ac.svg": "/test-task/static/media/ac.3fa8d876573e81d0e423faf46aa4efed.svg",
     "static/media/alcove.svg": "/test-task/static/media/alcove.18c3fc427a5298ec63b29e3a479b76ac.svg",
@@ -16,10 +16,12 @@
     "static/media/hob.svg": "/test-task/static/media/hob.fdfafe8faab47407be6a8e685d8987ab.svg",
     "static/media/microwave.svg": "/test-task/static/media/microwave.9e545fce20499a2bd1edd2be1e4b2523.svg",
     "static/media/freezer.svg": "/test-task/static/media/freezer.cc3b504ec8e74c63e7db444cce329b81.svg",
-    "static/media/pin.svg": "/test-task/static/media/pin.2eb8f2b228df3c38dfded85b94856d22.svg",
+    "static/media/pin_grey.svg": "/test-task/static/media/pin_grey.2eb8f2b228df3c38dfded85b94856d22.svg",
     "index.html": "/test-task/index.html",
     "static/media/heart_red.svg": "/test-task/static/media/heart_red.b9a7834e44d8b869a190a5af63eab30b.svg",
     "static/media/heart.svg": "/test-task/static/media/heart.eaf1f75040c7665a5b109514d8630386.svg",
+    "static/media/pin_black.svg": "/test-task/static/media/pin_black.5838fc2f2c0d6c89ac1f98dbe726b8d8.svg",
+    "static/media/star_grey.svg": "/test-task/static/media/star_grey.e66424b0174695a62011dd731c1d7adb.svg",
     "static/media/star_yellow.svg": "/test-task/static/media/star_yellow.e2e418408e4573c2f3da006fdc964ae5.svg",
     "static/media/tv.svg": "/test-task/static/media/tv.4855f40aff224713c6f2121435850e22.svg",
     "static/media/water.svg": "/test-task/static/media/water.649ccc3d473c87ae5c8a3a479df39b57.svg",
@@ -28,11 +30,11 @@
     "static/media/shower_wc.svg": "/test-task/static/media/shower_wc.ad88a8d99c1a7e345154aaa8c70799cc.svg",
     "static/media/kitchen.svg": "/test-task/static/media/kitchen.1d69252845b6b8717bd15e71e0b0f330.svg",
     "static/media/close.svg": "/test-task/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
-    "main.87dc591b.css.map": "/test-task/static/css/main.87dc591b.css.map",
-    "main.a4d1b786.js.map": "/test-task/static/js/main.a4d1b786.js.map"
+    "main.eebe9af6.css.map": "/test-task/static/css/main.eebe9af6.css.map",
+    "main.e8967a31.js.map": "/test-task/static/js/main.e8967a31.js.map"
   },
   "entrypoints": [
-    "static/css/main.87dc591b.css",
-    "static/js/main.a4d1b786.js"
+    "static/css/main.eebe9af6.css",
+    "static/js/main.e8967a31.js"
   ]
 }
