@@ -9,7 +9,19 @@ export const fetchVehiclesApi = async () => {
   return data;
 };
 
+// export const getVehicleById = async vehicleId => {
+//   const { data } = await instanceVehicles.get(`vehicles/${vehicleId}`);
+//   return data;
+// };
+
 export const getVehicleById = async vehicleId => {
-  const { data } = await instanceVehicles.get(`vehicles/${vehicleId}`);
-  return data;
+  try {
+    const { data } = await instanceVehicles.get(`vehicles/${vehicleId}`);
+    console.log('Vehicle details:', data); // Add this line to log the data
+    return data;
+  } catch (error) {
+    console.error('Error fetching vehicle detail API:', error);
+    throw error; // Re-throw the error to handle it in the calling code
+  }
 };
+

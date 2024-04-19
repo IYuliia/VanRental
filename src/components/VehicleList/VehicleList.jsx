@@ -1,8 +1,10 @@
-import ShowMoreButton from '../../components/ShowMoreButton/ShowMoreButton';
-import React, { useEffect, useState } from 'react';
-import { fetchVehiclesApi } from '../../api/vehicles';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavourite, setShowModal, setSelectedVehicle, setCurrentPage, resetVehicles } from '../../store/vehiclesSlice/slice.js';
+import { fetchVehiclesThunk } from '../../store/vehiclesSlice/thunks.js';
 import styles from './VehicleList.module.css';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
+import ShowMoreButton from '../../components/ShowMoreButton/ShowMoreButton';
 import Modal from '../../components/Modal/Modal';
 import { ReactComponent as HeartIcon } from '../../icons/heart.svg';
 import { ReactComponent as StarIcon } from '../../icons/star_yellow.svg';
@@ -23,59 +25,39 @@ import { ReactComponent as MicrowaveIcon } from '../../icons/microwave.svg';
 import { ReactComponent as GasIcon } from '../../icons/gas.svg';
 import { ReactComponent as WaterIcon } from '../../icons/water.svg';
 
-
-
 const VehicleList = () => {
-  const [vehicles, setVehicles] = useState([]);
-  const [visibleVehicles, setVisibleVehicles] = useState([]);
-  const [loadMoreVisible, setLoadMoreVisible] = useState(false);
-  const [selectedVehicle, setSelectedVehicle] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [favorites, setFavorites] = useState([]);
-
+  const dispatch = useDispatch();
+  const { items: vehicles, isLoading, loadMoreVisible, showModal, selectedVehicle, favourites, currentPage, pageSize } = useSelector(state => state.vehicles);
+  
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchVehiclesApi();
-        setVehicles(data);
-        setVisibleVehicles(data.slice(0, 4));
-        if (data.length > 4) {
-          setLoadMoreVisible(true);
-        }
-      } catch (error) {
-        console.error('Error fetching vehicles data:', error);
-      }
+    dispatch(fetchVehiclesThunk());
+    dispatch(setCurrentPage(1));
+    return () => {
+      dispatch(resetVehicles());
     };
-
-    fetchData();
-  }, []);
+  }, [dispatch]); 
+  
+  const visibleVehicles = vehicles.slice(0, currentPage * pageSize);
 
   const loadMore = () => {
-    const nextIndex = visibleVehicles.length + 4;
-    setVisibleVehicles(vehicles.slice(0, nextIndex));
-    if (nextIndex >= vehicles.length) {
-      setLoadMoreVisible(false);
-    }
+    dispatch(setCurrentPage(currentPage + 1));
+  };
+ 
+  const handleToggleFavourite = vehicleId => {
+    dispatch(toggleFavourite(vehicleId));
   };
 
   const handleShowModal = vehicle => {
-    setSelectedVehicle(vehicle);
-    setShowModal(true);
+    dispatch(setSelectedVehicle(vehicle));
+    dispatch(setShowModal(true));
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
-  const toggleFavorite = vehicleId => {
-    if (favorites.includes(vehicleId)) {
-      setFavorites(favorites.filter(id => id !== vehicleId));
-    } else {
-      setFavorites([...favorites, vehicleId]);
-    }
+    dispatch(setShowModal(false));
   };
 
   return (
+
     <div>
       <ul className={styles.ul}>
         {visibleVehicles.map(vehicle => (
@@ -91,10 +73,10 @@ const VehicleList = () => {
                   <h1 className={styles.heading}>{vehicle.name}</h1>
                   <div className={styles.end}>
                   <p className={styles.price}>€{vehicle.price}</p>
-                  {favorites.includes(vehicle._id) ? (
-                      <RedHeartIcon className={styles.heartIcon} onClick={() => toggleFavorite(vehicle._id)} />
+                  {favourites.includes(vehicle._id) ? (
+                      <RedHeartIcon className={styles.heartIcon} onClick={() => handleToggleFavourite(vehicle._id)} />
                     ) : (
-                      <HeartIcon className={styles.heartIcon} onClick={() => toggleFavorite(vehicle._id)} />
+                      <HeartIcon className={styles.heartIcon} onClick={() => handleToggleFavourite(vehicle._id)} />
                     )}
                   </div>
                 </div>
@@ -136,9 +118,17 @@ const VehicleList = () => {
           </li>
         ))}
       </ul>
-      <div className={styles.loadMoreButtonContainer}>
-        {loadMoreVisible && <LoadMoreButton onClick={loadMore} />}
-      </div>
+
+      {isLoading && (
+        <p>Loading...</p>
+      )}
+
+      {loadMoreVisible && !isLoading && visibleVehicles.length >= pageSize && visibleVehicles.length < vehicles.length && (
+        <div className={styles.loadMoreButtonContainer}>
+          <LoadMoreButton onClick={loadMore} />
+        </div>
+      )}
+
       {showModal && (
         <Modal vehicle={selectedVehicle} onClose={handleCloseModal} />
       )}

@@ -1,31 +1,22 @@
-import VehicleDetails from '../../components/VehicleDetails/VehicleDetails';
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Favourites = () => {
-  const [favourites, setFavourites] = useState([]);
+  const { favourites, vehicles } = useSelector(state => state.vehicles);
 
-  useEffect(() => {
-    const storedFavourites = JSON.parse(localStorage.getItem('favourites')) || [];
-    setFavourites(storedFavourites);
-  }, []);
+  console.log('Favourites array:', favourites);
+  console.log('Vehicles array:', vehicles);
 
-  const removeFavourite = (vehicleId) => {
-    const updatedFavourites = favourites.filter((id) => id !== vehicleId);
-    setFavourites(updatedFavourites);
-    localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
-  };
+  const favouriteVehicles = vehicles.filter(vehicle => favourites.includes(vehicle._id));
 
   return (
     <div>
-      <h2>Favourite Vehicles</h2>
+      <h1>Favourite Vehicles</h1>
       <ul>
-        {favourites.map((vehicleId) => (
-          <li key={vehicleId}>
-
-            <VehicleDetails vehicleId={vehicleId} />
-           
-            <button onClick={() => removeFavourite(vehicleId)}>Remove from Favourites</button>
+        {favouriteVehicles.map(vehicle => (
+          <li key={vehicle._id}>
+            <Link to={`/vehicle/${vehicle._id}`}>{vehicle.name}</Link>
           </li>
         ))}
       </ul>
@@ -34,3 +25,5 @@ const Favourites = () => {
 };
 
 export default Favourites;
+
+

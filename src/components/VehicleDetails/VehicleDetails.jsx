@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { getVehicleById } from '../../api/vehicles';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getVehicleByIdThunk } from '../../store/vehiclesSlice/thunks';
+import { setSelectedVehicle } from '../../store/vehiclesSlice/slice';
 
 const VehicleDetails = ({ vehicleId }) => {
-  const [vehicle, setVehicle] = useState(null);
+  const dispatch = useDispatch();
+  const vehicle = useSelector(state => state.vehicles.selectedVehicle);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getVehicleById(vehicleId);
-        setVehicle(data);
-      } catch (error) {
-        console.error('Error fetching vehicle details:', error);
-      }
+    dispatch(getVehicleByIdThunk(vehicleId));
+    return () => {
+      dispatch(setSelectedVehicle(null));
     };
-
-    fetchData();
-  }, [vehicleId]);
+  }, [dispatch, vehicleId]);
 
   if (!vehicle) {
     return <div>Loading...</div>;
@@ -31,3 +28,4 @@ const VehicleDetails = ({ vehicleId }) => {
 };
 
 export default VehicleDetails;
+
