@@ -5,7 +5,9 @@ export const selectVehicles = state => ({
     isLoading: state.vehicles.isLoading,
     showModal: state.vehicles.showModal,
     selectedVehicle: state.vehicles.selectedVehicle,
-    favourites: state.vehicles.favourites
+    favourites: state.vehicles.favourites,
+    locationOptions: state.vehicles.locationOptions,
+    filteredVehicles: state.filter.filteredVehicles,
 });
 
 

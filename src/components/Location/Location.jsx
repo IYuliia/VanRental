@@ -2,11 +2,21 @@ import React, { useState } from 'react';
 import styles from './Location.module.css';
 import { ReactComponent as GreyPinIcon } from '../../icons/pin_grey.svg';
 import { ReactComponent as BlackPinIcon } from '../../icons/pin_black.svg';
+// import { useDispatch } from 'react-redux';
 
 const Location = () => {
-
+  // const dispatch = useDispatch();
+  const [location, setLocation] = useState('');
   const [isInputFocused, setIsInputFocused] = useState(false);
 
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+
+  // const handleSearch = () => {
+  //   dispatch(setLocation(location)); 
+  // };
+  
   const handleInputFocus = () => {
     setIsInputFocused(true);
   };
@@ -28,6 +38,8 @@ const Location = () => {
         placeholder="City"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
+        value={location} 
+        onChange={handleLocationChange} 
       />
       </div>
     </div>

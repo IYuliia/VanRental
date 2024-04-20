@@ -28,7 +28,9 @@ import { ReactComponent as WaterIcon } from '../../icons/water.svg';
 const VehicleList = () => {
   const dispatch = useDispatch();
   const { items: vehicles, isLoading, loadMoreVisible, showModal, selectedVehicle, favourites, currentPage, pageSize } = useSelector(state => state.vehicles);
-  
+  // const filteredVehicles = useSelector(selectFilteredVehicles);
+
+
   useEffect(() => {
     dispatch(fetchVehiclesThunk());
     dispatch(setCurrentPage(1));

@@ -9,7 +9,6 @@ export const fetchVehiclesThunk = createAsyncThunk (
 'vehicles/fetchAll',
 async (_, thunkAPI) => {
     try {
-        console.log('Fetching vehicles...');
         const data = await fetchVehiclesApi();
         thunkAPI.dispatch(appendVehicles(data));
         thunkAPI.dispatch(setLoadMoreVisible(data.length > 4));

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchVehiclesThunk, getVehicleByIdThunk } from './thunks.js';
 import { handleAppendVehicles, handleFetchVehicles, handleGetVehicleById, handleLoadMoreVisible, handlePending, handleRejected } from './handlers.js';
 
-const loadFavouritesFromLocalStorage = () => {
+export const loadFavouritesFromLS = () => {
   const favouritesJSON = localStorage.getItem('favourites');
   return favouritesJSON ? JSON.parse(favouritesJSON) : [];
 };
@@ -16,7 +16,7 @@ const initialState = {
   selectedVehicle: null,
   showModal: false,
   vehicleDetails: null,
-  favourites: loadFavouritesFromLocalStorage(),
+  favourites: [],
 };
 
 const vehiclesSlice = createSlice ({
@@ -31,7 +31,6 @@ const vehiclesSlice = createSlice ({
         } else {
           state.favourites = state.favourites.filter(id => id !== vehicleId);
         }
-        console.log('Updated favourites:', state.favourites);
         localStorage.setItem('favourites', JSON.stringify(state.favourites));
       },
      
@@ -53,6 +52,9 @@ const vehiclesSlice = createSlice ({
       setVehicleDetails: (state, action) => {
         state.vehicleDetails = action.payload;
       },
+      initializeFavourites: (state, action) => {
+        state.favourites = action.payload;
+      },
 },
 extraReducers: builder => {
     builder
@@ -67,4 +69,4 @@ extraReducers: builder => {
 
 export const vehiclesReducer = vehiclesSlice.reducer;
 
-export const { toggleFavourite, setLoadMoreVisible, setSelectedVehicle, setShowModal, setCurrentPage, appendVehicles,  setVehicleDetails } = vehiclesSlice.actions;
+export const { toggleFavourite, initializeFavourites, setLoadMoreVisible, setSelectedVehicle, setShowModal, setCurrentPage, appendVehicles,  setVehicleDetails } = vehiclesSlice.actions;
