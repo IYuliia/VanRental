@@ -23,8 +23,8 @@
   .img {
     object-fit: cover;
     border-radius: 10px;
-    width: 290px;
-    height: 310px;
+    width: 380px;
+    height: 250px;
     flex-shrink: 0;
   }
   
@@ -98,53 +98,4 @@
     line-height: 24px;
   }
   
-  .descr {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: var(--light-black-color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    width: 525px;
-    margin-bottom: 24px;
-  }
-  
-  .detailsList {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
-    flex-wrap: wrap;
-    max-width: 526px;
-    margin-bottom: 24px;
-  }
-  
-  .detailsIcon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-  
-  .details {
-    flex-basis: calc((100% - 24) / 4);
-    max-width: 160px;
-    display: flex;
-    align-items: center; 
-    padding: 12px 18px;
-    align-items: center;
-    background-color: var(--light-grey-color);
-    border-radius: 100px;
-    border: transparent;
-    color: var(--black-color);
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    text-transform: capitalize;
-  }
-  
-  .loadMoreButtonContainer {
-    text-align: center;
-  }
   

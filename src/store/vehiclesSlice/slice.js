@@ -19,8 +19,6 @@ const initialState = {
   favourites: loadFavouritesFromLocalStorage(),
 };
 
-
-
 const vehiclesSlice = createSlice ({
     name: 'vehicles',
     initialState,
@@ -50,11 +48,8 @@ const vehiclesSlice = createSlice ({
         state.currentPage = action.payload;
       },
       appendVehicles: (state, action) => {
-        state.items.push(...action.payload);
-      },
-      resetVehicles: () => {
-        return initialState;
-      },
+          state.items = action.payload;
+        },
       setVehicleDetails: (state, action) => {
         state.vehicleDetails = action.payload;
       },
@@ -72,4 +67,4 @@ extraReducers: builder => {
 
 export const vehiclesReducer = vehiclesSlice.reducer;
 
-export const { toggleFavourite, setLoadMoreVisible, setSelectedVehicle, setShowModal, setCurrentPage, appendVehicles, resetVehicles, setVehicleDetails } = vehiclesSlice.actions;
+export const { toggleFavourite, setLoadMoreVisible, setSelectedVehicle, setShowModal, setCurrentPage, appendVehicles,  setVehicleDetails } = vehiclesSlice.actions;

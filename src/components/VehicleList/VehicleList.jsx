@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavourite, setShowModal, setSelectedVehicle, setCurrentPage, resetVehicles } from '../../store/vehiclesSlice/slice.js';
+import { toggleFavourite, setShowModal, setSelectedVehicle, setCurrentPage } from '../../store/vehiclesSlice/slice.js';
 import { fetchVehiclesThunk } from '../../store/vehiclesSlice/thunks.js';
 import styles from './VehicleList.module.css';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
@@ -32,9 +32,6 @@ const VehicleList = () => {
   useEffect(() => {
     dispatch(fetchVehiclesThunk());
     dispatch(setCurrentPage(1));
-    return () => {
-      dispatch(resetVehicles());
-    };
   }, [dispatch]); 
   
   const visibleVehicles = vehicles.slice(0, currentPage * pageSize);
