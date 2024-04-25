@@ -4,11 +4,11 @@
 
 .header {
   color: var(--black-color);
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 30px;
-    margin-bottom: 48px;
-    text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 48px;
+  text-align: center;
 }
 
 .emptyMessage {
@@ -33,7 +33,7 @@
     padding: 24px;
     margin-bottom: 32px;
     flex: 1 0 calc(50% - 24px); 
-  max-width: calc(50% - 24px);
+    max-width: calc(50% - 24px);
   }
   
   .li:last-child {

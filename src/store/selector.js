@@ -6,8 +6,7 @@ export const selectVehicles = state => ({
     showModal: state.vehicles.showModal,
     selectedVehicle: state.vehicles.selectedVehicle,
     favourites: state.vehicles.favourites,
-    locationOptions: state.vehicles.locationOptions,
-    filteredVehicles: state.filter.filteredVehicles,
 });
 
+  
 

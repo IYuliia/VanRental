@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavourite, setShowModal, setSelectedVehicle, setCurrentPage } from '../../store/vehiclesSlice/slice.js';
+import { toggleFavourite, setShowModal, setSelectedVehicle, setCurrentPage, loadFavouritesFromLS, initializeFavourites } from '../../store/vehiclesSlice/slice.js';
 import { fetchVehiclesThunk } from '../../store/vehiclesSlice/thunks.js';
 import styles from './VehicleList.module.css';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
@@ -28,10 +28,10 @@ import { ReactComponent as WaterIcon } from '../../icons/water.svg';
 const VehicleList = () => {
   const dispatch = useDispatch();
   const { items: vehicles, isLoading, loadMoreVisible, showModal, selectedVehicle, favourites, currentPage, pageSize } = useSelector(state => state.vehicles);
-  // const filteredVehicles = useSelector(selectFilteredVehicles);
-
-
+  
   useEffect(() => {
+    const favourites = loadFavouritesFromLS();
+    dispatch(initializeFavourites(favourites));
     dispatch(fetchVehiclesThunk());
     dispatch(setCurrentPage(1));
   }, [dispatch]); 

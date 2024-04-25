@@ -14,8 +14,8 @@ const Favourites = () => {
   const { items: vehicles,  showModal, selectedVehicle, favourites } = useSelector(state => state.vehicles);
   
   useEffect(() => {
-    const favouritesFromLS = loadFavouritesFromLS();
-    dispatch(initializeFavourites(favouritesFromLS));
+    const favourites = loadFavouritesFromLS();
+    dispatch(initializeFavourites(favourites));
   }, [dispatch]);
    
 

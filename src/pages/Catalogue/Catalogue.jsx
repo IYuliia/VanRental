@@ -6,6 +6,7 @@ import SearchButton from '../../components/SearchButton/SearchButton';
 import styles from './Catalogue.module.css';
 
 const Catalogue = () => {
+  
   return (
     <div className={styles.catalogueContainer}>
       <div className={styles.leftColumn}>

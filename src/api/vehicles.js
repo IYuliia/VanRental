@@ -11,18 +11,8 @@ export const fetchVehiclesApi = async () => {
 
 
 export const getVehicleById = async vehicleId => {
-  try {
     const { data } = await instanceVehicles.get(`vehicles/${vehicleId}`);
     return data;
-  } catch (error) {
-    throw error; 
-  }
 };
 
-export const fetchVehiclesByLocation = async (location) => {
-  const { data } = await instanceVehicles.get('vehicles', {
-    params: { location },
-  });
-  return data;
-};
 
